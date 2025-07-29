@@ -52,7 +52,7 @@ smith.drawGrid =() => {
     let Glast=null;
     for(let t=0;t<5;t+=.2){
        let Zt={x:t*Z0,y:xx*Z0};
-       Gt = cdiv(Zt.x-Z0, Zt.y, Zt.x+Z0, Zt.y);
+       let Gt = cdiv(Zt.x-Z0, Zt.y, Zt.x+Z0, Zt.y);
        if(Glast) drawLine(smith,Glast.x, Glast.y,Gt.x,Gt.y);
        Glast=Gt;
     }
@@ -98,7 +98,7 @@ function init_canvas(canvasId){
   let ctx=canvasId.getContext('2d');
   let dragging = null;
   
-  ctx.canvas.height=  ctx.canvas.width;
+  ctx.canvas.height = ctx.canvas.width;
   
   // Handle touch events
   canvasId.addEventListener("touchstart", (e) => {
@@ -113,7 +113,7 @@ function init_canvas(canvasId){
     
     if (dragging) {
       let rect = canvasId.getBoundingClientRect();
-      Z=canvasId.getZ(( e.touches[0].clientX - rect.left) / scale,  1-(e.touches[0].clientY-rect.top)/ scale );
+      let Z=canvasId.getZ(( e.touches[0].clientX - rect.left) / scale,  1-(e.touches[0].clientY-rect.top)/ scale );
       Draw(impXY,Z);
       Draw(smith,Z);
     }
@@ -131,7 +131,7 @@ function init_canvas(canvasId){
   canvasId.addEventListener("mousemove", (e) => {
     if (dragging) {
       let rect = canvasId.getBoundingClientRect(); 
-      Z=canvasId.getZ(e.offsetX/ scale, 1-e.offsetY/ scale );
+      let Z=canvasId.getZ(e.offsetX/ scale, 1-e.offsetY/ scale );
       Draw(impXY,Z);
       Draw(smith,Z);    
     }
