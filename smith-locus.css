@@ -1,0 +1,32 @@
+.description { 
+  padding:10px;
+}
+
+.container { 
+  padding:10px;
+}
+
+.tile {
+  border: 3px solid black; 
+  margin-right:5px; 
+  padding:5px;     
+  display: inline-block; 
+}
+
+.canvasTitle {
+    font-weight:bold;
+    padding-bottom:10px;
+    margin:0px;
+    display: block;
+    border:none;
+    background-color:white;  
+}
+
+canvas {
+    padding: 0;
+    margin:0;
+    display: block;
+    border:none;
+    background-color:white;  
+}
+
