@@ -67,7 +67,7 @@ smith.drawmodZ = (modZ) => {
   let Glast=null;
   for(let t=-Math.PI/2;t<1.01*Math.PI/2;t+=Math.PI/100){
      let Zt={x:modZ*Math.cos(t),y:-modZ*Math.sin(t)};
-     Gt = cdiv(Zt.x-Z0, Zt.y, Zt.x+Z0, Zt.y);
+     let Gt = cdiv(Zt.x-Z0, Zt.y, Zt.x+Z0, Zt.y);
      if(Glast) drawLine(smith,Glast.x, Glast.y,Gt.x,Gt.y);
      Glast=Gt;
   }
